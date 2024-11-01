@@ -1,0 +1,15 @@
+OCSP Requests and Responses:
+
+OCSP Protocol is used for checking the status of SSL/TLS certificates to ensure they are still valid. In this screenshot, you can see multiple OCSP requests and responses, indicating that a device is validating certificates.
+The traffic flow between source IP 10.0.2.15 and destination IP 49.44.194.83 involves several OCSP requests and responses, which suggests that the client is verifying certificate validity from a Certificate Authority (CA) server.
+
+
+HTTP Traffic:
+
+There are two HTTP GET requests with the resource /success.txt followed by a query parameter (ipv4). This type of request to check for /success.txt is sometimes used by systems or services as a simple connectivity check, possibly to confirm internet connectivity or service availability.
+The HTTP response code 200 OK shows that the server responded successfully with a plain text file. This could indicate normal communication or a benign connectivity verification check.
+Conclusion on Traffic Patterns:
+
+The combination of OCSP requests with simple HTTP GET requests suggests this traffic may be related to a legitimate application or service performing connectivity checks while verifying the validity of SSL/TLS certificates.
+No apparent anomalies are visible in this screenshot, as OCSP checks and basic HTTP GET requests to /success.txt are common for verifying server reachability and certificate status.
+This traffic appears typical of background connectivity checks, with no obvious signs of malicious activity based on the information shown.
