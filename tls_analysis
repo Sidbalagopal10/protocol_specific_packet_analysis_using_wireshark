@@ -1,0 +1,16 @@
+TLS Handshake Process:
+The sequence includes several Client Hello and Server Hello messages, which are part of the initial TLS handshake.
+The Client Hello messages include Server Name Indication (SNI) fields, specifying domains like contile.services.mozilla.com and content-signature-2.cdn.mozilla.net. This suggests that the client (likely a web browser or application) is trying to establish secure connections with these Mozilla-related domains.
+Following the Server Hello messages, there are Key Exchange and Change Cipher Spec messages, indicating the negotiation of encryption keys and cipher suites for secure communication.
+
+Encrypted Data Transmission:
+After the handshake, there are multiple packets labeled as Application Data. This indicates that the secure connection has been established, and encrypted data is now being exchanged.
+The repeated Application Data entries suggest that this connection is in use for an active data session, where the client and server are exchanging encrypted information.
+
+Protocol Versions:
+The session includes both TLS 1.2 and TLS 1.3. TLS 1.3 is the latest version, offering improved security and efficiency. Seeing both versions might indicate that the client or application can support multiple protocol versions depending on server capabilities.
+
+Conclusion on Security:
+The SNI fields confirm that the client is connecting to legitimate Mozilla-related services, suggesting these connections are part of normal, expected application behavior.
+There are no visible signs of anomalies, such as certificate warnings, handshake failures, or unsupported cipher suites. The presence of both TLS 1.2 and TLS 1.3 shows compatibility with modern security standards.
+Based on the information shown, this traffic appears normal and secure, with no immediate signs of malicious activity.
